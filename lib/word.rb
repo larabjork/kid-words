@@ -1,17 +1,17 @@
 class Word
   attr_reader :id
-  attr_accessor :word
+  attr_accessor :term
 
   @@words = {}
   @@total_rows = 0
 
-  def initialize(word, id)
-    @word = word
+  def initialize(term, id)
+    @term = term
     @id = id || @@total_rows += 1
   end
 
   def save
-    @@words[self.id] = Word.new(self.word, self.id)
+    @@words[self.id] = Word.new(self.term, self.id)
   end
 
   def self.all
@@ -23,11 +23,15 @@ class Word
     @@total_rows = 0
   end
 
-  def update_word(word)
-    @word = word
+  def update_word(term)
+    @term = term
   end
 
   def delete_word
     @@words.delete(self.id)
+  end
+
+  def self.find_word(term)
+    @@words.values.select { |word| word.term == term }
   end
 end

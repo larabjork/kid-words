@@ -36,7 +36,7 @@ describe '#Word' do
     it("updates a word entry--not the definition") do
       word1 = Word.new('gaint', nil).save
       word1.update_word('giant')
-      expect(word1.word).to(eq("giant"))
+      expect(word1.term).to(eq("giant"))
     end
   end
 
@@ -50,9 +50,9 @@ describe '#Word' do
   end
 
   describe('.find_word') do
-    it("finds a word entry") do
+    it("finds a word entry when word is entered") do
       word1 = Word.new("stupendous", nil).save
-      expect(Word.find_word(word1.word)).to(eq([word1]))
+      expect(Word.find_word(word1.term)).to(eq([word1]))
     end
   end
 
