@@ -31,7 +31,11 @@ class Word
     @@words.delete(self.id)
   end
 
-  def self.find_word(term)
+  def self.find_word(id)
+    @@words[id]
+  end
+
+  def self.search_word(term)
     @@words.values.select { |word| word.term == term }
   end
 end

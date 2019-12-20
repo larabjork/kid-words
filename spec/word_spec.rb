@@ -50,9 +50,16 @@ describe '#Word' do
   end
 
   describe('.find_word') do
+    it("finds a word by id") do
+      word1 = Word.new("stupendous", nil).save
+      expect(Word.find_word(word1.id)).to(eq(word1))
+    end
+  end
+
+  describe('.search_word') do
     it("finds a word entry when word is entered") do
       word1 = Word.new("stupendous", nil).save
-      expect(Word.find_word(word1.term)).to(eq([word1]))
+      expect(Word.search_word(word1.term)).to(eq([word1]))
     end
   end
 
