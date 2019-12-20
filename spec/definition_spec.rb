@@ -66,7 +66,7 @@ describe '#Definition' do
   it("finds definitions for a word") do
     word1 = Word.new("stupendous", nil).save
     def1 = Definition.new('really cool', @word.id, nil).save
-    def2 = Definition.new('even better than cool', @word.id, nil).save
+    def2 = Definition.new('even better than cool', word1.id, nil).save
     expect(Definition.find_by_word(word1.id)).to(eq([def2]))
   end
 end
