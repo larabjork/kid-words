@@ -81,15 +81,15 @@ end
 
 post('/words/:id/definitions') do
   @word = Word.find_word(params[:id].to_i)
-  definition = Definition.new(params[:definition_name], @word.id, nil)
+  definition = Definition.new(params[:definition_term], @word.id, nil)
   definition.save
   erb(:word)
 end
 
 
 patch('/words/:id/definitions/:definition_id') do
-  @word = Word.find(params[:id].to_i())
-  definition = Definition.find(params[:definition_id].to_i())
+  @word = Word.find_word(params[:id].to_i())
+  definition = Definition.find_def(params[:definition_id].to_i())
   definition.update_def(params[:name], @word.id)
   erb(:word)
 end

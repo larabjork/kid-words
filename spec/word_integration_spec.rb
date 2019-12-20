@@ -16,7 +16,7 @@ end
 describe('create a definition path', {:type => :feature}) do
   it('creates a word and then goes to the word page') do
     word = Word.new('Panda', nil).save
-    visit("/words/#{word.id}")
+    visit("/words/#{word.id}/definitions")
     fill_in('definition_term', :with => 'Really cute black and white animal')
     click_on('Add definition')
     expect(page).to have_content('Really cute black and white animal')

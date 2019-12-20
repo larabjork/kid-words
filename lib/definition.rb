@@ -47,5 +47,9 @@ class Definition
     definitions
   end
 
+  def word
+    Word.find_word(self.word_id)
+  end
+
 
 end
