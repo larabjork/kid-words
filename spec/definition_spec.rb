@@ -44,4 +44,13 @@ describe '#Definition' do
       expect(def1.definition).to(eq('extra fancy'))
     end
   end
+
+  describe ('#delete_def') do
+    it('deletes a definition of a word') do
+      def1 = Definition.new('fancy', @word.id, nil).save
+      def2 = Definition.new('really pretty', @word.id, nil).save
+      def1.delete_def
+      expect(Definition.all).to(eq([def2]))
+    end
+  end
 end
