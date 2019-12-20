@@ -30,10 +30,8 @@ These specs were developed based on the assignment description.
 **Input:** [accesses existing definition]
 **Output:** [deletes definition]
 
-
 ### Technologies Used
 Ruby 2.5.1, rspec, pry, Bundler, Sinatra, Capybara, Heroku
-
 
 Project was written using Google Chrome; no other browsers were tested for compatibility.
 
@@ -43,8 +41,6 @@ Project was written using Google Chrome; no other browsers were tested for compa
 3. Install Bundler if you do not already have it by running **gem install bundler** in the terminal.
 4. Run **bundle install** to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
 5. If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
-
-
 
 ### Known Issues and Limitations
 * No known bugs
