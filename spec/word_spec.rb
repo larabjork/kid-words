@@ -44,7 +44,7 @@ describe '#Word' do
     it("deletes a word entry") do
       word1 = Word.new("stupendous", nil).save
       word2 = Word.new("grotesque", nil).save
-      word1.delete()
+      word1.delete_word()
       expect(Word.all).to(eq([word2]))
     end
   end
