@@ -37,5 +37,11 @@ describe '#Definition' do
     end
   end
 
-
+  describe ('#update_def') do
+    it('updates a definition after the user edits it') do
+      def1 = Definition.new('fancy', @word.id, nil).save
+      def1.update_def('extra fancy', @word.id)
+      expect(def1.definition).to(eq('extra fancy'))
+    end
+  end
 end
