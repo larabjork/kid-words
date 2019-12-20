@@ -22,4 +22,8 @@ class Word
     @@words = {}
     @@total_rows = 0
   end
+
+  def update_word(word)
+    @word = word
+  end
 end
