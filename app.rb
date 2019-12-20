@@ -21,3 +21,8 @@ post('/words') do
   @words = Word.all()
   erb(:words)
 end
+
+get('/words/:id/edit') do
+  @word = Word.find(params[:id].to_i)
+  erb(:edit_word)
+end
