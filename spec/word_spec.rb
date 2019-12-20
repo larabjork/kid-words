@@ -34,6 +34,15 @@ describe '#Word' do
       end
     end
 
+  describe('#update_word') do
+    it("updates a word entry--not the definition") do
+      word1 = Word.new('gaint', nil).save
+      word1.update_word('giant')
+      expect(word1.word).to(eq("giant"))
+    end
+  end
+
+
 
 
 end
