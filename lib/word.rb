@@ -9,4 +9,17 @@ class Word
     @word = word
     @id = id || @@total_rows += 1
   end
+
+  def save
+    @@words[self.id] = Word.new(self.word, self.id)
+  end
+
+  def self.all
+    @@words.values
+  end
+
+  def self.clear
+    @@words = {}
+    @@total_rows = 0
+  end
 end
