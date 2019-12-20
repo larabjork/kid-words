@@ -53,4 +53,12 @@ describe '#Definition' do
       expect(Definition.all).to(eq([def2]))
     end
   end
+
+  describe('.find_def') do
+    it("finds a definition by id") do
+      def1 = Definition.new('fancy', @word.id, nil).save
+      def2 = Definition.new('really pretty', @word.id, nil).save
+      expect(Definition.find_def(def1.id)).to(eq(def1))
+    end
+  end
 end
