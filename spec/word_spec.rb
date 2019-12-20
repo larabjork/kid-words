@@ -49,6 +49,12 @@ describe '#Word' do
     end
   end
 
+  describe('.find_word') do
+    it("finds a word entry") do
+      word1 = Word.new("stupendous", nil).save
+      expect(Word.find_word(word1.word)).to(eq([word1]))
+    end
+  end
 
 
 
