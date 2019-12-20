@@ -33,5 +33,9 @@ class Definition
     @@definitions.delete(self.id)
   end
 
+  def self.find_def(id)
+    @@definitions[id]
+  end
+
 
 end
