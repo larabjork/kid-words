@@ -25,10 +25,8 @@ describe '#Word' do
 
   describe('.clear') do
       it("clears all words") do
-        word1 = Word.new("stupendous", nil)
-        word1.save
-        word2 = Word.new("grotesque", nil)
-        word2.save
+        word1 = Word.new("stupendous", nil).save
+        word2 = Word.new("grotesque", nil).save
         Word.clear
         expect(Word.all).to(eq([]))
       end
@@ -41,6 +39,16 @@ describe '#Word' do
       expect(word1.word).to(eq("giant"))
     end
   end
+
+  describe('#delete_word') do
+    it("deletes a word entry") do
+      word1 = Word.new("stupendous", nil).save
+      word2 = Word.new("grotesque", nil).save
+      word1.delete()
+      expect(Word.all).to(eq([word2]))
+    end
+  end
+
 
 
 
