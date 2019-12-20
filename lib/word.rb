@@ -38,4 +38,9 @@ class Word
   def self.search_word(term)
     @@words.values.select { |word| word.term == term }
   end
+
+  def definitions
+    Definition.find_by_word(self.id)
+  end
+
 end
