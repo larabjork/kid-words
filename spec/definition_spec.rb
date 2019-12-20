@@ -61,4 +61,14 @@ describe '#Definition' do
       expect(Definition.find_def(def1.id)).to(eq(def1))
     end
   end
+
+  describe('.find_by_word') do
+  it("finds definitions for a word") do
+    word1 = Word.new("stupendous", nil).save
+    def1 = Definition.new('really cool', @word.id, nil).save
+    def2 = Definition.new('even better than cool', @word.id, nil).save
+    expect(Definition.find_by_word(word1.id)).to(eq([def2]))
+  end
+end
+
 end
