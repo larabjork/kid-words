@@ -6,3 +6,5 @@ gem 'pry'
 gem 'fileutils'
 gem 'sinatra-contrib'
 gem 'capybara'
+
+ruby '2.5.1'
