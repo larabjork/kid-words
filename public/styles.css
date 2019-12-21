@@ -1,0 +1,38 @@
+body {
+  background-color: #95E06C;
+}
+
+h1 {
+  color: #094D92;
+  font-family: 'Bubblegum Sans', cursive;
+}
+h2 {
+  color: #094D92;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4{
+  color: #1C1018;
+  font-family: 'Oswald', sans-serif;
+}
+h5{
+  color: #1C1018;
+  font-family: 'Roboto', sans-serif;
+}
+
+p, li {
+  color: #6F8695;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: #C3F73A;
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
