@@ -65,8 +65,8 @@ end
 
 
 delete('/words/:id') do
-  @word = Word.find(params[:id].to_i())
-  @word.delete()
+  @word = Word.find_word(params[:id].to_i())
+  @word.delete_word()
   @words = Word.all
   erb(:words)
 end
