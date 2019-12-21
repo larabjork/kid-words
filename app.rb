@@ -101,5 +101,3 @@ delete('/words/:id/definitions/:definition_id') do
   @word = Word.find_word(params[:id].to_i)
   erb(:word)
 end
-
-run Sinatra::Application.run!
