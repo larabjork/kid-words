@@ -1,6 +1,6 @@
-<h1>Wacky, Wonderful Words</h1>
+<h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
 
-<h2>Do You Know What These Words Mean?</h2>
+<p>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat. They had also hidden all the signs that described them. Can you help the zookeeper write some new signs and match up the animals correctly?</p>
 <% if @words.any? %>
   <ul>
     <% @words.each do |word| %>
@@ -8,14 +8,11 @@
     <% end %>
   </ul>
 <% else %>
-  <p>We don't have any words to show you.</p>
+  <p>We don't have any animals to show you.</p>
 <% end %>
 
-<a href='/words/new'> Add a new word!</a>
+<a href='/words/new'> Add a new animal!</a>
 
 <% @words.each do |word| %>
     <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
   <% end %>
-
-  <h4>This is heading 4</h4>
-  <h5>This is heading 5</h5>

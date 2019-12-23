@@ -1,10 +1,8 @@
-<h1>Wacky, Wonderful Words</h1>
-
-<h4>Word: <%= @word.term %></h4>
+<h2>Animal: <%= @word.term %></h2>
 
 
 
-<h5>Definitions</h5>
+<h3>Descriptions</h3>
 
   <% if @word.definitions %>
     <ul>
@@ -13,19 +11,22 @@
       <% end %>
     </ul>
   <% else %>
-    <p>There are no definitions listed for this word yet.</p>
+    <p>There are no descriptions listed for this animal yet.</p>
   <% end %>
 
-<h4>Add a definition:</h4>
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
-    <label for="definition_term">Type your definition here.</label>
+    <label for="definition_term">Type your description here.</label>
     <input id="definition_term" name="definition_term" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Add definition</button>
+  <button type="submit" class="btn">Add my description</button>
 </form>
 
+<br>
+<br>
+<br>
 
-<p><a href="/words/<%= @word.id %>/edit">Edit word</a></p>
-<a href="/words">Return to word list</a>
+
+<p><a href="/words/<%= @word.id %>/edit">Edit animal name</a></p>
+<a href="/words">Return to animal list</a>

@@ -5,10 +5,19 @@ body {
 h1 {
   color: #094D92;
   font-family: 'Bubblegum Sans', cursive;
+  size: 85px;
 }
+
 h2 {
   color: #094D92;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  size: 40px;
+}
+
+h3 {
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  size: 16px;
 }
 
 h4{
@@ -21,18 +30,17 @@ h5{
 }
 
 p, li {
-  color: #6F8695;
-  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  size: 128px;
 }
 
 a {
-  color: #C3F73A;
+  color: #094D92;
   font-family: 'Lato', sans-serif;
 }
 
+label {
+  color: #094D92;
 
-
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Roboto', sans-serif;
+}
