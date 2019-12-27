@@ -1,43 +1,44 @@
 body {
   background-color: #95E06C;
+  /* font-family: 'Roboto', sans-serif; */
 }
 
 h1 {
   color: #094D92;
-  font-family: 'Bubblegum Sans', cursive;
-  size: 85px;
+  size: 112px;
+  /* font-family: 'Bubblegum Sans', cursive; */
+  padding-top: 60px;
 }
 
 h2 {
   color: #094D92;
-  font-family: 'Roboto', sans-serif;
-  size: 40px;
+  size: 36px;
 }
 
 h3 {
-  color: black;
-  font-family: 'Oswald', sans-serif;
-  size: 16px;
+  color: #094D92;
+  size: 24px;
 }
 
-h4{
-  color: #1C1018;
-  font-family: 'Oswald', sans-serif;
+h4 {
+  color: #094D92;
+  padding-top: 24px;
+
 }
-h5{
+h5 {
   color: #1C1018;
-  font-family: 'Roboto', sans-serif;
 }
 
-p, li {
+p {
   color: black;
-  font-family: 'Roboto', sans-serif;
-  size: 128px;
+  size: 18px;
+}
+li {
+  color: black;
 }
 
 a {
   color: #094D92;
-  font-family: 'Lato', sans-serif;
 }
 
 label {

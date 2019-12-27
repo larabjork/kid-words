@@ -1,6 +1,21 @@
 <h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
 
-<p>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat. They had also hidden all the signs that described them. Can you help the zookeeper write some new signs and match up the animals correctly?</p>
+<h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat.</h4>
+
+<h4>The zookeeper does not have a lot of time before the zoo opens. She cannot move all the animals back to the right places. But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
+
+<h4>Can you help the zookeeper write some new signs and match up the animals correctly?</h4>
+
+<h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have definitely have details about what the animal looks like. Once you have those details, add more details if you want!</h4>
+
+
+<br>
+<br>
+<a href='/words/new'> Add a new animal!</a>
+<br>
+<br>
+<br>
+
 <% if @words.any? %>
   <ul>
     <% @words.each do |word| %>
@@ -11,7 +26,6 @@
   <p>We don't have any animals to show you.</p>
 <% end %>
 
-<a href='/words/new'> Add a new animal!</a>
 
 <% @words.each do |word| %>
     <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
