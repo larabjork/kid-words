@@ -21,9 +21,6 @@ get('/words') do
   erb(:words)
 end
 
-
-
-
 get('/words/new') do
   erb(:new_word)
 end
@@ -41,13 +38,10 @@ post('/words') do
   erb(:words)
 end
 
-
-
 get('/words/:id') do
   @word = Word.find_word(params[:id].to_i())
   erb(:word)
 end
-
 
 patch('/words/:id') do
   @word = Word.find_word(params[:id].to_i())
@@ -58,12 +52,6 @@ patch('/words/:id') do
   erb(:words)
 end
 
-
-
-
-
-
-
 delete('/words/:id') do
   @word = Word.find_word(params[:id].to_i())
   @word.delete_word()
@@ -71,13 +59,10 @@ delete('/words/:id') do
   erb(:words)
 end
 
-
-
 get('/words/:id/definitions/:definition_id') do
   @definition = Definition.find_def(params[:definition_id].to_i())
   erb(:definition)
 end
-
 
 post('/words/:id/definitions') do
   @word = Word.find_word(params[:id].to_i)
@@ -86,14 +71,12 @@ post('/words/:id/definitions') do
   erb(:word)
 end
 
-
 patch('/words/:id/definitions/:definition_id') do
   @word = Word.find_word(params[:id].to_i)
   definition = Definition.find_def(params[:definition_id].to_i)
   definition.update_def(params[:def_entry], @word.id)
   erb(:word)
 end
-
 
 delete('/words/:id/definitions/:definition_id') do
   definition = Definition.find_def(params[:definition_id].to_i)

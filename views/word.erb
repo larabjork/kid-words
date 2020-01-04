@@ -2,7 +2,7 @@
 
 
 
-<h3>Descriptions</h3>
+<h3>Type your description of this animal here.</h3>
 
   <% if @word.definitions %>
     <ul>
@@ -17,7 +17,6 @@
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
-    <label for="definition_term">Type your description here.</label>
     <input id="definition_term" name="definition_term" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Add my description</button>

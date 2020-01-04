@@ -1,34 +1,47 @@
 body {
   background-color: #c1eeaa;
   background-image: url(background-zoo.jpg);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+button {
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 h1 {
   color: #094D92;
   size: 112px;
   padding-top: 60px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 h2 {
   color: #094D92;
   size: 36px;
+font-family: 'Bubblegum Sans', cursive;
 }
 
 h3 {
   color: #094D92;
   size: 24px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 h4 {
   color: #094D92;
   padding-top: 24px;
+  font-family: 'Open Sans', sans-serif;
 
 }
 h5 {
   color: #094D92;
+  font-family: 'Open Sans', sans-serif;
 }
 
-p {
+p, li {
   color: #094D92;
-  size: 18px;
+  size: 24px;
+  font-family: 'Open Sans', sans-serif;
+
 }

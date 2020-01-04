@@ -1,36 +1,27 @@
 <h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
 
-
-<img src=”images/background-zoo.jpg”>
-
 <h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat.</h4>
 
 <h4>The zookeeper does not have a lot of time before the zoo opens. She cannot move all the animals back to the right places in time. But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
 
-<h4>Can you help the zookeeper write some new signs and match up the animals correctly?</h4>
+<h3>Can you help the zookeeper write some new signs and match up the animals correctly?</h3>
 
-<h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have definitely have details about what the animal looks like. Once you have those details, add more details if you want!</h4>
+<h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have have details about what the animal looks like. Once you have those details, add more information if you want!</h4>
 
-<h4>Where do you want to start?</h4>
-<ul>
-  <li>I want to start with a picture of an animal. <a href='/words/new'>Show me some pictures!</a></li>
-  <li>I don't want to start with a picture of an animal. <a href='/words/new'> I want to start writing!</a></li>
-</ul>
+<h3>Are you ready?</h3>
+  <p><a href='/words/new'> I want to start writing!</a></p>
+
 
 
 <br>
 <br>
+<h3>Here is a list of all the animals with new signs.</h3>
 <% if @words.any? %>
   <ul>
     <% @words.each do |word| %>
-      <li><%= word.term %></li>
+      <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
     <% end %>
   </ul>
 <% else %>
-  <p>We don't have any animals to show you.</p>
+  <p>Ack! We need to get writing!</p>
 <% end %>
-
-
-<% @words.each do |word| %>
-    <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
-  <% end %>
