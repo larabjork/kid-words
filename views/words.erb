@@ -1,27 +1,52 @@
-<h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
+  <h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
 
-<h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat.</h4>
+  <h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends. Everyone woke up in someone else's habitat.</h4>
 
-<h4>The zookeeper does not have a lot of time before the zoo opens. She cannot move all the animals back to the right places in time. But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
+  <h4>The zookeeper does not have a lot of time before the zoo opens. She cannot move all the animals back to the right places in time. But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
 
-<h3>Can you help the zookeeper write some new signs and match up the animals correctly?</h3>
+<div class="panel panel-default">
+ <div class="panel-body">
+    <div class="gallery">
+      <img src="images/gorilla.jpeg" alt="Adult gorilla" width="159" height="100">
+      <div class="desc">Nurse sharks are usually less than 10 feet long.</div>
+    </div>
 
-<h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have have details about what the animal looks like. Once you have those details, add more information if you want!</h4>
+    <div class="gallery">
+      <img src="images/pandas.jpg" alt="Two giant pandas, one adult and one cub" width="150" height="100">
+      <div class="desc">Howler monkeys use their tails to pick fruit and nuts from trees.</div>
+    </div>
 
-<h3>Are you ready?</h3>
-  <p><a href='/words/new'> I want to start writing!</a></p>
+    <div class="gallery">
+      <img src="images/lions.jpeg" alt="Two adult lions" width="150" height="100">
+      <div class="desc">Macaws are a kind of parrot.</div>
+    </div>
+
+    <div class="gallery">
+      <img src="images/kangaroos.jpeg" alt="Female kangaroo with joey in pouch" width="150" height="100">
+      <div class="desc">Most of the alligators in the United States live in Florida or Louisiana.</div>
+    </div>
+  </div>
+</div>
+  <br>
+  <br>
+  <h3>Can you help the zookeeper write some new signs and match up the animals correctly?</h3>
+
+  <h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have have details about what the animal looks like. Once you have those details, add more information if you want!</h4>
+
+  <h3>Are you ready?</h3>
+    <p><a href='/words/new'> I want to start writing!</a></p>
 
 
 
-<br>
-<br>
-<h3>Here is a list of all the animals with new signs.</h3>
-<% if @words.any? %>
-  <ul>
-    <% @words.each do |word| %>
-      <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>Ack! We need to get writing!</p>
-<% end %>
+  <br>
+  <br>
+  <h3>Here is a list of all the animals with new signs.</h3>
+  <% if @words.any? %>
+    <ul>
+      <% @words.each do |word| %>
+        <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>Ack! We need to get writing!</p>
+  <% end %>
