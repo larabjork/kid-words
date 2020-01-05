@@ -1,20 +1,21 @@
-<h1>Do you need to correct the spelling of <%= @word.term %>?</h1>
+<h2>Do you need to correct the spelling of <%= @word.term %>?</h2>
 
 <form action="/words/<%= @word.id() %>" method="post">
   <input name="_method" type="hidden" value="patch">
 
-  <label for="word_term">Type the name of your animal again</label>
-  <input id="word_term" name="word_term" type="text">
+  <h3>Type the name of your animal again</h3>
+  <input id="word_term" name="word_term" type="text" required="true" class="form-control">
+  <br>
 
-  <button type="submit">Update</button>
+  <button type="submit" class="btn btn-info btn-lg">Update</button>
 </form>
 
-<p><a href="/words">Return to animal list</a></p>
+<h4><a href="/words">Return to animal list</a><h4>
 
-<h1>Do you need to remove <%= @word.term %> from our animal list?</h1>
+<h1>Do you want to remove <%= @word.term %> from our animal list?</h1>
 
 <form action="/words/<%= @word.id() %>" method="post">
   <input name="_method" type="hidden" value="delete">
 
-  <button type="submit">Remove animal from the list</button>
+  <button type="submit" class="btn btn-info btn-lg">Remove animal from the list</button>
 </form>

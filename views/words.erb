@@ -1,67 +1,58 @@
   <h2>Uh-oh! The animals at the zoo played a trick on the zookeeper.</h2>
 
-<div class="row">
-  <div class="col-lg-6">
-        <h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends.</h4>
-    <h4>Everyone woke up in someone else's habitat.</h4>
-
-    <h4>The zookeeper does not have a lot of time before the zoo opens.</h4>
-    <h4>She cannot move all the animals back to the right places before people arrive to visit the zoo.</h4>
-
-    <h4>But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
-
-    <h4>Here are just a few examples of what those sneaky animals did!</h4>
-  </div>
-  <div class="col-lg-6">
-    <h3>Can you help the zookeeper write some new signs and match up the animals correctly?</h3>
-    <h3><a href='/words/new'> Yes, I want to start writing!</a></h3>
-
-
-
-    <br>
-    <br>
-    <h3>Nice work! Here are the new signs that you wrote.</h3>
-    <% if @words.any? %>
-    <ul>
-      <% @words.each do |word| %>
-      <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
+  <div class="row">
+    <div class="col-lg-6">
+      <h4>The zookeeper came to work this morning, and all of the animals had switched beds with their friends.</h4>
+      <h4>Everyone woke up in someone else's habitat.</h4>
+      <h4>The zookeeper does not have a lot of time before the zoo opens.</h4>
+      <h4>She cannot move all the animals back to the right places before people arrive to visit the zoo.</h4>
+      <h4>But visitors to the zoo will be confused if the animal they see does not match the animal that is described on the sign.</h4>
+      <h4>Here are just a few examples of what those sneaky animals did!</h4>
+    </div>
+    <div class="col-lg-6">
+      <h3>Can you help the zookeeper write some new signs and match up the animals correctly?</h3>
+      <h3><a href='/words/new'> Yes, I want to start writing!</a></h3>
+      <br>
+      <br>
+      <h3>Nice work! Here are the new signs that you wrote.</h3>
+      <% if @words.any? %>
+      <ul>
+        <% @words.each do |word| %>
+        <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
+        <% end %>
+      </ul>
+      <% else %>
+      <p><a href='/words/new'>Ack! We need to get writing!</a></p>
       <% end %>
-    </ul>
-    <% else %>
-    <p>Ack! We need to get writing!</p>
-    <% end %>
-
+    </div>
   </div>
-</div>
 
-<div class="panel panel-default">
- <div class="panel-body">
-    <div class="gallery">
-     <img src="images/worried.png" alt="Worried face emoji" width="150" height="100">
-     <div class="desc">The zookeeper is very worried. Can you help her? </div>
+  <div class="panel panel-default">
+   <div class="panel-body">
+      <div class="gallery">
+       <img src="images/worried.png" alt="Worried face emoji" width="150" height="100">
+       <div class="desc">The zookeeper is very worried. Can you help her? </div>
+      </div>
+
+      <div class="gallery">
+        <img src="images/gorilla.jpeg" alt="Adult gorilla" width="150" height="100">
+        <div class="desc">Nurse sharks are usually less than 10 feet long.</div>
+      </div>
+
+      <div class="gallery">
+        <img src="images/pandas.jpg" alt="Two giant pandas, one adult and one cub" width="150" height="100">
+        <div class="desc">Howler monkeys use their tails to pick fruit and nuts from trees.</div>
+      </div>
+
+      <div class="gallery">
+        <img src="images/lions.jpeg" alt="Two adult lions" width="150" height="100">
+        <div class="desc">Macaws are a kind of parrot.</div>
+      </div>
+
+      <div class="gallery">
+        <img src="images/kangaroos.jpeg" alt="Female kangaroo with joey in pouch" width="150" height="100">
+        <div class="desc">Most of the alligators in the United States live in Florida or Louisiana.</div>
+      </div>
+
     </div>
-
-    <div class="gallery">
-      <img src="images/gorilla.jpeg" alt="Adult gorilla" width="150" height="100">
-      <div class="desc">Nurse sharks are usually less than 10 feet long.</div>
-    </div>
-
-    <div class="gallery">
-      <img src="images/pandas.jpg" alt="Two giant pandas, one adult and one cub" width="150" height="100">
-      <div class="desc">Howler monkeys use their tails to pick fruit and nuts from trees.</div>
-    </div>
-
-    <div class="gallery">
-      <img src="images/lions.jpeg" alt="Two adult lions" width="150" height="100">
-      <div class="desc">Macaws are a kind of parrot.</div>
-    </div>
-
-    <div class="gallery">
-      <img src="images/kangaroos.jpeg" alt="Female kangaroo with joey in pouch" width="150" height="100">
-      <div class="desc">Most of the alligators in the United States live in Florida or Louisiana.</div>
-    </div>
-
   </div>
-</div>
-  <br>
-  <br>

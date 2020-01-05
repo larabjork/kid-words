@@ -12,6 +12,8 @@ _* When a word is clicked, it should lead to a page with the word's definitions.
 _* Children should be able to add a word, and when viewing a word, be able to add, update or delete one or more definitions._
 _* This week you should deploy your application to Heroku so the kids can try it out!_
 
+After setting up the project structure to meet the basic specifications, I gave it a zoo animal theme; instead of defining words, kids are asked to describe zoo animals.
+
 ### Specifications
 These specs were developed based on the assignment description.
 **1. Behavior:** A user should be able to enter a word and have it be saved into a list of words.
@@ -33,17 +35,13 @@ These specs were developed based on the assignment description.
 ### Technologies Used
 Ruby 2.5.1, rspec, pry, Bundler, Sinatra, Capybara, Heroku
 
-Project was written using Google Chrome; no other browsers were tested for compatibility.
+Project was written using Google Chrome and Firefox.
 
 ### Project Setup instructions
-1. Ensure that you have the correct version of Ruby installed.
-2. Clone the project locally from github.
-3. Install Bundler if you do not already have it by running **gem install bundler** in the terminal.
-4. Run **bundle install** to manage gems; if you make additional changes to the Gemfile, you will need to run this command again.
-5. If something doesn't display correctly or goes wrong somehow, please contact me at <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
+No special setup should be required, if you are viewing the project via the Heroku link provided below.
 
 ### Known Issues and Limitations
-* No known bugs
+* No known bugs per se, but CSS styling does not always display properly, especially in Google Chrome. Clearing browser history and quitting the Chrome application helped. However, some inconsistencies, especially in font size may occur.
 
 ### Where to Find This Project
 https://sheltered-ocean-44503.herokuapp.com/

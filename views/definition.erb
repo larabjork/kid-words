@@ -2,9 +2,10 @@
 
 <form action="/words/<%= @definition.word.id %>/definitions/<%= @definition.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
-  <label for='def_entry'>Type a new description here</label>
-  <input id='def_entry' name='def_entry' type="text" class="form-control">
-  <button type="submit">I'm all done</button>
+  <h3>If you don't like that definition, type a new version here.</h3>
+  <input id='def_entry' name='def_entry' type="text" class="form-control" required="true">
+  <br>
+  <button type="submit" class="btn btn-info btn-lg">All done</button>
 </form>
 
 <br>
@@ -15,7 +16,7 @@
 <form action="/words/<%= @definition.word.id %>/definitions/<%= @definition.id %>" method="post">
   <input name="_method" type="hidden" value="delete">
 
-  <button type="submit">I don't want this description at all. Delete it!</button>
+  <button type="submit" class="btn btn-info btn-lg">I don't want this description at all. Delete it!</button>
 </form>
 
-<a href="/words/<%= @definition.word.id %>">Back to <%= @definition.word.term %></a>
+<h4><a href="/words/<%= @definition.word.id %>">Back to <%= @definition.word.term %></a></h4>

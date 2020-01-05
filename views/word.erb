@@ -1,27 +1,30 @@
+<h4>Remember, signs at the zoo give good descriptions of the animals.</h4>
+  <ul>
+    <li>Your descriptions should have details about what the animal looks like.</li>
+    <li>Once you have those details, add more information if you want!</li>
+  </ul>
+
 <h2>Animal: <%= @word.term %></h2>
 
-<h4>Signs at the zoo give good descriptions of the animals. Your descriptions should have details about what the animal looks like.</h4>
-<h4>Once you have those details, add more information if you want!</h4>
-
+<% if @word.definitions %>
+<ul>
+  <% @word.definitions.each do |definition| %>
+  <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no descriptions listed for this animal yet.</p>
+<% end %>
 
 <h3>Type your description of this animal here.</h3>
 
-  <% if @word.definitions %>
-    <ul>
-      <% @word.definitions.each do |definition| %>
-        <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.definition %></a></li>
-      <% end %>
-    </ul>
-  <% else %>
-    <p>There are no descriptions listed for this animal yet.</p>
-  <% end %>
 
 
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
-    <input id="definition_term" name="definition_term" class="form-control" type="text">
+    <input id="definition_term" name="definition_term" class="form-control" type="text" required="true">
   </div>
-  <button type="submit" class="btn">Add my description</button>
+  <button type="submit" class="btn btn-info btn-lg">Add my description</button>
 </form>
 
 <br>
