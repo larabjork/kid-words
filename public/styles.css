@@ -45,6 +45,10 @@ p, li {
 
 }
 
+.panel-default  {
+  background: #eeddaa;
+}
+
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
@@ -63,5 +67,11 @@ div.gallery img {
 
 div.desc {
   padding: 15px;
+  text-align: center;
+}
+
+div.example {
+  padding: 15px;
+  font-family: 'Bubblegum Sans', cursive
   text-align: center;
 }
