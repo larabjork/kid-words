@@ -14,15 +14,15 @@
       <h3><a href='/words/new'> Yes, I want to start writing!</a></h3>
       <br>
       <br>
-      <h3>Nice work! Here are the new signs that you wrote.</h3>
       <% if @words.any? %>
+      <h3>Nice work! Make sure you have a description for the animals below.</h3>
       <ul>
         <% @words.each do |word| %>
         <li><a href="/words/<%= word.id %>"><%= word.term %></a></li>
         <% end %>
       </ul>
       <% else %>
-      <p><a href='/words/new'>Ack! We need to get writing!</a></p>
+      <h3><a href='/words/new'>Ack! We need to get writing!</a></h3>
       <% end %>
     </div>
   </div>
